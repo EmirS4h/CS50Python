@@ -1,6 +1,6 @@
-def main():
-    print_block(4, 2)
-
+def run_week_2_loops():
+    print("----- Week_2 Loops -----")
+    print_block(4,2)
 
 def print_column(height: int):
     print("#\n"*height, end="")
@@ -20,4 +20,4 @@ def print_block(width: int, height: int):
         print("#"*width)
 
 
-main()
+run_week_2_loops()
