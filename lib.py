@@ -1,5 +1,5 @@
 import os
-
+import re
 
 def get_files_with_extension(dirPath: str, extension: str, full_path: bool = False) -> list[str]:
     files = []
@@ -21,6 +21,11 @@ def get_extension(file: str) -> tuple[str, str | None]:
         return (file_name, extension.lower())
     else:
         return (file, None)
+
+
+def get_srcs(s: str):
+    matches = re.findall(r'src=[\'"]?([^\'" >]+)', s, flags=re.IGNORECASE)
+    print(matches)
 
 
 if __name__ == "__main__":
