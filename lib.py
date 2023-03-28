@@ -18,7 +18,7 @@ def get_extension(file: str) -> tuple[str, str | None]:
     if extension_start_index != 0:
         file_name = file[:extension_start_index - 1]
         extension = file[extension_start_index:]
-        return (file_name, extension.lower())
+        return (file_name, extension)
     else:
         return (file, None)
 
